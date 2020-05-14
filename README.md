@@ -22,3 +22,22 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Mutations
+```
+query AllAnnotations {
+  listAnnotations {
+    items {
+      id
+      concept
+      annotator
+    }
+  }
+}
+
+mutation createAnnotations {
+  ano1: createAnnotation(input: {concept: "Scotoplanes globosa", annotator: "DCline", top: 0, left: 0, width: 0 height:0 }) {id, concept, annotator }
+  ano2: createAnnotation(input: {concept: "Cystechinus loveni", annotator: "DCline", top: 0, left: 0, width: 0 height:0 }) {id, concept, annotator }
+}
+```
